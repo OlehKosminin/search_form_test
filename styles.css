@@ -1,0 +1,42 @@
+.header {
+  width: 100%;
+  background-color: rgb(240, 244, 245);
+  padding: 20px 10px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.input {
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+
+.btn {
+  padding: 2px 5px;
+  height: 100%;
+  background-color: transparent;
+
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: antiquewhite;
+}
+
+.search-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.hide {
+  display: none;
+}
