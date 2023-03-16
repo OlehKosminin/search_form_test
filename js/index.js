@@ -1,12 +1,15 @@
 import { items } from "./colection/first-colection.js";
 import createList from "./function/createList.js";
+import createOffersTips from "./function/createOffersTips.js";
 
+import sortOffers from "./function/sortOffers.js";
 // const list = document.querySelector("..search-list");
 
 const refs = {
   input: document.querySelector(".input"),
   list: document.querySelector(".search-list"),
   form: document.querySelector(".form"),
+  offerTips: document.querySelector(".offers"),
 };
 
 const markup = createList(items);
@@ -16,20 +19,12 @@ refs.list.insertAdjacentHTML("beforeend", markup);
 let offers = [];
 
 refs.input.addEventListener("input", (evt) => {
-  console.log(evt.currentTarget.value);
   let targetValue = evt.currentTarget.value;
-
   let items = document.querySelectorAll(".item");
 
-  items.forEach(function (item) {
-    let value = item.children[0].innerText;
-    // console.log("value: ", value);
-    if (value.search(targetValue) === -1) {
-      item.classList.add("hide");
-    } else {
-      console.log(item);
-    }
-  });
+  const elements = sortOffers(items, targetValue);
+  // console.log("elements: ", elements);
+  const tips = createOffersTips(elements);
 });
 
 // let acc = null;
