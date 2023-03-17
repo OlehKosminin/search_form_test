@@ -40,3 +40,29 @@
 .hide {
   display: none;
 }
+
+.wrapper-offers {
+  position: relative;
+}
+
+.tips {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  position: absolute;
+  background-color: rgb(246, 246, 240);
+}
+
+.tips-item {
+  font-size: 20px;
+
+  text-align: center;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.tips-link {
+  color: black;
+  text-decoration: none;
+}
